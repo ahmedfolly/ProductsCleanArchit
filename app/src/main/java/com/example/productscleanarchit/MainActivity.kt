@@ -43,7 +43,6 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun App(viewModel:ProductsViewModel) {
     val state = viewModel.products.collectAsState()
-    viewModel.fetchData()
     GetAllProducts(state = state.value)
 }
 
